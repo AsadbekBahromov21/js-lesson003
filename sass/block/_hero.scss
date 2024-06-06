@@ -1,0 +1,103 @@
+.hero{
+    background: #f7f7f7;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    &__wrapper{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+       margin-bottom: 38px;
+       p{
+        font-size: 14px;
+        font-weight: 400;
+        &:hover{
+            color: #ddd;
+            cursor: pointer;
+        }
+       }
+       b{
+        font-size: 30px;
+        font-weight: 600;
+        color: #292929;
+       }
+    }
+    &__btr{
+        display: grid;
+         gap: 3px;
+        grid-template-columns: repeat(11, 1fr);
+        button{
+            @include button();
+        }
+    }
+}
+@media (max-width:1170px) {
+    .hero{
+        &__btr{
+            display: grid;
+             gap: 3px;
+            grid-template-columns: repeat(8, 1fr);
+            button{
+                @include button();
+            }
+        }
+    }
+    
+}
+@media (max-width:890px) {
+    .hero{
+        &__btr{
+            display: grid;
+             gap: 3px;
+             grid-template-columns: repeat(6, 1fr);
+            button{
+                @include button();
+            }
+        }
+    }
+    
+}
+@media (max-width:760px) {
+    .hero{
+        &__btr{
+            display: grid;
+             gap: 3px;
+             grid-template-columns: repeat(4, 1fr);
+            button{
+                @include button();
+            }
+        }
+    }
+    
+}
+@media (max-width:464px) {
+    .hero{
+        &__wrapper{
+            p{
+                font-size: 12px;
+                font-weight: 400;
+                &:hover{
+                    color: #ddd;
+                    cursor: pointer;
+                }
+               }
+               b{
+                font-size: 26px;
+                font-weight: 600;
+                color: #292929;
+               }
+        }
+        &__btr{
+            display: grid;
+             gap: 3px;
+             grid-template-columns: repeat(3, 1fr);
+            button{
+                @include button();
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+    }
+    
+}
